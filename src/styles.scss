@@ -18,6 +18,10 @@ $custom-typography: mat.define-typography-config(
 /* Appliquer la typographie par défaut aux composants Angular Material */
 @include mat.all-component-typographies($custom-typography);
 
+.mat-ripple-element {
+  background-color: rgba(255, 255, 255, 0.2); /* Couleur (rouge avec 50% de transparence) */
+  /* Autres styles personnalisés pour l'effet matRipple si nécessaire */
+}
 
 /* Configurer Tailwind pour utiliser Nunito */
 @layer base {
