@@ -11,7 +11,7 @@ export const appRoutes: Route[] = [
             {
                 path: '',
                 redirectTo: 'services',
-                pathMatch: "full"
+                pathMatch: 'full',
             },
             {
                 path: 'services',
@@ -33,7 +33,7 @@ export const appRoutes: Route[] = [
                     import('./page/temp-app/contact/contact.component').then(
                         (m) => m.ContactComponent,
                     ),
-            }
+            },
         ],
     },
     {

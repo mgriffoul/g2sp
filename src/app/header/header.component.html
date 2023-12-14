@@ -6,20 +6,29 @@
         <g2sp-header-item
             [categoryName]="PageId.SERVICES"
             class="h-16"
-            [ngClass]="{ 'border-b-2 border-blue-500 transition duration-200': isSelected('SERVICES') }"
+            [ngClass]="{
+                'border-b-2 border-blue-500 transition duration-200':
+                    isSelected('SERVICES')
+            }"
             [isSelected]="true"
             (categoryClicked)="onClickCategory($event)"
         />
         <g2sp-header-item
             [categoryName]="PageId.TEAM"
             class="h-16"
-            [ngClass]="{ 'border-b-2 border-blue-500 transition duration-200': isSelected('TEAM') }"
+            [ngClass]="{
+                'border-b-2 border-blue-500 transition duration-200':
+                    isSelected('TEAM')
+            }"
             (categoryClicked)="onClickCategory($event)"
         />
         <g2sp-header-item
             [categoryName]="PageId.CONTACT"
             class="h-16"
-            [ngClass]="{ 'border-b-2 border-blue-500 transition duration-200': isSelected('CONTACT') }"
+            [ngClass]="{
+                'border-b-2 border-blue-500 transition duration-200':
+                    isSelected('CONTACT')
+            }"
             (categoryClicked)="onClickCategory($event)"
         />
     </nav>
