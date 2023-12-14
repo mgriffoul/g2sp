@@ -4,20 +4,23 @@
     </div>
     <nav class="flex-1 flex items-center justify-normal h-full">
         <g2sp-header-item
-            categoryName="SERVICES"
+            [categoryName]="PageId.SERVICES"
+            class="h-16"
+            [ngClass]="{ 'border-b-2 border-blue-500 transition duration-200': isSelected('SERVICES') }"
+            [isSelected]="true"
             (categoryClicked)="onClickCategory($event)"
         />
         <g2sp-header-item
-            categoryName="TEAM"
+            [categoryName]="PageId.TEAM"
+            class="h-16"
+            [ngClass]="{ 'border-b-2 border-blue-500 transition duration-200': isSelected('TEAM') }"
             (categoryClicked)="onClickCategory($event)"
         />
-
         <g2sp-header-item
-            categoryName="CONTACT"
+            [categoryName]="PageId.CONTACT"
+            class="h-16"
+            [ngClass]="{ 'border-b-2 border-blue-500 transition duration-200': isSelected('CONTACT') }"
             (categoryClicked)="onClickCategory($event)"
         />
     </nav>
 </mat-toolbar>
-<!--toto-->
-<!--sfgmjsfsdfsdfsdfsdfgolsdifjhl   -->
-<!--qfsdfsdsdfsdfsdfdfsd-->
