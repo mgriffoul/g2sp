@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# If you have an .nvmrc file, we use the relevant node version
+if [ -f ".nvmrc" ]; then
+  nvm use
+fi
+
+npm run format && npm run lint:fix

@@ -1,22 +1,20 @@
-import {Component, EventEmitter, Input, Output} from "@angular/core";
-import {MatRippleModule} from "@angular/material/core";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatRippleModule } from '@angular/material/core';
 
 @Component({
-  selector: 'header-item',
-  standalone: true,
-  imports: [
-    MatRippleModule
-  ],
-  templateUrl: './header-item.component.html'
+    selector: 'g2sp-header-item',
+    standalone: true,
+    imports: [MatRippleModule],
+    templateUrl: './header-item.component.html',
 })
-export class HeaderItemComponent{
-  @Output()
-  categoryClicked = new EventEmitter<string>();
+export class HeaderItemComponent {
+    @Output()
+    categoryClicked = new EventEmitter<string>();
 
-  @Input()
-  categoryName!: string;
+    @Input()
+    categoryName!: string;
 
-  onClickCategory(category: string) {
-    this.categoryClicked.emit(category);
-  }
+    onClickCategory(category: string) {
+        this.categoryClicked.emit(category);
+    }
 }
