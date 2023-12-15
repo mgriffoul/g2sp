@@ -1,28 +1,14 @@
 <div class="flex justify-center items-center flex-col w-[75vw] px-24">
-    <div class="flex flex-col relative mt-8 w-full">
-        <img
-            [src]="'assets/secu5croped.jpg'"
-            alt="sécurité"
-            class="shadow-xl shadow-gray-200"
-        />
-
-        <p
-            class="text-3xl font-bold text-white absolute bottom-28 left-6 text-center whitespace-break-spaces"
-        >
-            Prenez un temps d’avance sur le prochain événement cyber-disruptif
-        </p>
+    <div class="mt-8 w-full">
+        <g2sp-page-header iconPath="assets/secu5croped.jpg"></g2sp-page-header>
     </div>
 
-    <div class="w-full px-24 mt-12 text-lg whitespace-break-spaces">
-        <div class="text-3xl font-bold text-center text-blue-600">
-            POURQUOI ?
-        </div>
-
-        <div class="w-full mt-16 h-36 flex justify-around">
-            <ng-container *ngFor="let section of sections">
+    <div class="w-full px-24 mt-12 pb-24">
+        <g2sp-services-section [sectionTitle]="'POURQUOI ?'">
+            <ng-container *ngFor="let section of whySections">
                 <div class="flex flex-col">
-                    <div class="text-center">
-                        <mat-icon class="text-blue-500 scale-[300%]">{{
+                    <div *ngIf="section.iconName" class="text-center">
+                        <mat-icon class="mt-16 text-blue-700 scale-[300%]">{{
                             section.iconName
                         }}</mat-icon>
                     </div>
@@ -31,6 +17,23 @@
                     </div>
                 </div>
             </ng-container>
-        </div>
+        </g2sp-services-section>
     </div>
+
+    <div class="w-full mt-32">
+        <mat-divider class="w-full"></mat-divider>
+    </div>
+
+    <div class="w-full px-24 mt-12 pb-24">
+        <g2sp-services-section [sectionTitle]="'SIMPLE'">
+            <ng-container *ngFor="let section of simpleSections">
+                <div class="flex flex-col">
+                    <div class="w-72 p-8 text-center">
+                        {{ section.description }}
+                    </div>
+                </div>
+            </ng-container>
+        </g2sp-services-section>
+    </div>
+    <mat-divider class="w-full"></mat-divider>
 </div>
