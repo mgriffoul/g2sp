@@ -40,6 +40,7 @@ export const appRoutes: Route[] = [
         path: 'home',
         component: WorkInProgressComponent,
     },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '**', redirectTo: '/home' },
+    // TODO ne pas embarquer
+    { path: '', redirectTo: '/beta-version', pathMatch: 'full' },
+    { path: '**', redirectTo: '/beta-version' },
 ];
