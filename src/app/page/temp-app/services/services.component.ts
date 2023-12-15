@@ -24,28 +24,9 @@ export interface Section {
 })
 export class ServicesComponent implements OnInit {
     whySections: Section[] = [];
-    simpleSections: Section[] = [];
 
     ngOnInit() {
         this.initWhySections();
-        this.initSimpleSections();
-    }
-
-    private initSimpleSections() {
-        this.simpleSections = [
-            {
-                description:
-                    'Un état des lieux précis des forces et faiblesses de votre résilience cyber : un rapport opérationnel détaillé, une synthèse pour la Direction',
-            },
-            {
-                description:
-                    'Des recommandations ciblées, réalistes, échelonnées, adaptées au niveau de digitalisation de vos processus',
-            },
-            {
-                description:
-                    'Un accompagnement au juste nécessaire cohérent avec le dimensionnement de vos ressources et les caractéristiques de vos activités',
-            },
-        ];
     }
 
     private initWhySections() {

@@ -1,39 +1,85 @@
-<div class="flex justify-center items-center flex-col w-[75vw] px-24">
+<div class="flex flex-col justify-center items-center">
     <div class="mt-8 w-full">
         <g2sp-page-header iconPath="assets/secu5croped.jpg"></g2sp-page-header>
     </div>
 
-    <div class="w-full px-24 mt-12 pb-24">
-        <g2sp-services-section [sectionTitle]="'POURQUOI ?'">
-            <ng-container *ngFor="let section of whySections">
-                <div class="flex flex-col">
-                    <div *ngIf="section.iconName" class="text-center">
-                        <mat-icon class="mt-16 text-blue-700 scale-[300%]">{{
-                            section.iconName
-                        }}</mat-icon>
-                    </div>
-                    <div class="w-72 p-8 text-center">
-                        {{ section.description }}
+    <div class="px-24 w-full text-lg">
+        <div class="mt-12">
+            <g2sp-services-section
+                [sectionTitle]="'POURQUOI ?'"
+                [alignTitle]="'middle'"
+            >
+                <div class="flex mt-24">
+                    <ng-container *ngFor="let section of whySections">
+                        <div class="flex flex-col">
+                            <div class="text-center">
+                                <mat-icon class="text-blue-700 scale-[300%]">{{
+                                    section.iconName
+                                }}</mat-icon>
+                            </div>
+                            <div class="w-72 text-center mt-10 px-8">
+                                {{ section.description }}
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </g2sp-services-section>
+        </div>
+
+        <div class="mt-12">
+            <g2sp-services-section
+                [sectionTitle]="'SIMPLE'"
+                [alignTitle]="'left'"
+            >
+                <div class="flex">
+                    <div class="text-left w-full">
+                        <p>
+                            Un état des lieux précis des forces et faiblesses de
+                            votre résilience cyber.
+                        </p>
+                        <p>
+                            Un rapport opérationnel détaillé, une synthèse pour
+                            la Direction.
+                        </p>
+                        <p>
+                            Des recommandations ciblées, réalistes, échelonnées,
+                            adaptées au niveau de digitalisation de vos
+                            processus,
+                        </p>
+                        <p>
+                            Un accompagnement au juste nécessaire cohérent avec
+                            le dimensionnement de vos ressources et les
+                            caractéristiques de vos activités,
+                        </p>
                     </div>
                 </div>
-            </ng-container>
-        </g2sp-services-section>
-    </div>
+            </g2sp-services-section>
+        </div>
 
-    <div class="w-full mt-32">
-        <mat-divider class="w-full"></mat-divider>
-    </div>
-
-    <div class="w-full px-24 mt-12 pb-24">
-        <g2sp-services-section [sectionTitle]="'SIMPLE'">
-            <ng-container *ngFor="let section of simpleSections">
-                <div class="flex flex-col">
-                    <div class="w-72 p-8 text-center">
-                        {{ section.description }}
+        <div class="mt-12">
+            <g2sp-services-section
+                [sectionTitle]="'COMPÉTENT'"
+                [alignTitle]="'left'"
+            >
+                <div class="flex">
+                    <div class="text-left w-full">
+                        <p>Une expertise complète :</p>
+                        <ul>
+                            <li>Analyse des cyber-risques</li>
+                            <li>Audit interne organisation et processus</li>
+                            <li>Montée en maturité digitale</li>
+                            <li>
+                                Pilotage du déploiement des plans de
+                                sécurisation
+                            </li>
+                        </ul>
+                        <p>
+                            Un accompagnement transparent, indépendant, et
+                            réaliste
+                        </p>
                     </div>
                 </div>
-            </ng-container>
-        </g2sp-services-section>
+            </g2sp-services-section>
+        </div>
     </div>
-    <mat-divider class="w-full"></mat-divider>
 </div>
