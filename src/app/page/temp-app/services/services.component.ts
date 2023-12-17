@@ -4,6 +4,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ServicesSectionComponent } from '../../../component/services-section/services-section.component';
 import { MatListModule } from '@angular/material/list';
 import { PageHeaderComponent } from '../../../component/page-header/page-header.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 export interface Section {
     iconName?: string;
@@ -19,6 +21,8 @@ export interface Section {
         ServicesSectionComponent,
         MatListModule,
         PageHeaderComponent,
+        MatButtonModule,
+        MatCardModule,
     ],
     templateUrl: './services.component.html',
 })

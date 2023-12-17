@@ -71,33 +71,84 @@
         <div class="mt-12">
             <g2sp-services-section
                 [sectionTitle]="'COMPÉTENT'"
-                [alignTitle]="'left'"
+                [alignTitle]="'middle'"
             >
-                <div class="relative">
-                    <img
-                        [src]="'assets/expertise.jpg'"
-                        alt="sécurité"
-                        class="w-full shadow-xl shadow-gray-200"
-                    />
-                    <div class="flex absolute bottom-0 text-white">
-                        <div class="text-left w-full">
-                            <p>Une expertise complète :</p>
-                            <ul>
-                                <li>Analyse des cyber-risques</li>
-                                <li>Audit interne organisation et processus</li>
-                                <li>Montée en maturité digitale</li>
-                                <li>
-                                    Pilotage du déploiement des plans de
-                                    sécurisation
-                                </li>
-                            </ul>
-                            <p>
-                                Un accompagnement transparent, indépendant, et
-                                réaliste
-                            </p>
+                <div
+                    class="mt-12 px-64 pt-64 w-full"
+                    style="
+                        background-image: url('../../../../assets/expertise.jpg');
+                    "
+                >
+                    <div class="w-full flex flex-col">
+                        <!-- carré global-->
+                        <div class="flex">
+                            <!-- ligne une-->
+                            <div class="inline-block">
+                                <mat-card class="p-10">
+                                    <div class="text-center">
+                                        <mat-icon
+                                            class="text-blue-700 scale-[250%]"
+                                            >verified_user</mat-icon
+                                        >
+                                    </div>
+                                    <div class="pt-8 font-bold">
+                                        Analyse des cyber-risques
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="inline-block flex-1">
+                                <mat-card class="p-10">
+                                    <div class="text-center">
+                                        <mat-icon
+                                            class="text-blue-700 scale-[250%]"
+                                            >assessment</mat-icon
+                                        >
+                                        -
+                                    </div>
+                                    <div class="pt-8 font-bold">
+                                        Audit interne organisation et processus
+                                    </div>
+                                </mat-card>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-1">
+                            <!-- ligne deux-->
+                            <div class="inline-block flex-1">
+                                <mat-card class="p-10">
+                                    <div class="text-center">
+                                        <mat-icon
+                                            class="text-blue-700 scale-[250%]"
+                                            >engineering</mat-icon
+                                        >
+                                        -
+                                    </div>
+                                    <div class="pt-8 font-bold">
+                                        Pilotage du déploiement des plans de
+                                        sécurisation
+                                    </div>
+                                </mat-card>
+                            </div>
+
+                            <div class="inline-block">
+                                <mat-card class="p-10">
+                                    <div class="text-center">
+                                        <mat-icon
+                                            class="text-blue-700 scale-[250%]"
+                                            >trending_up</mat-icon
+                                        >
+                                        -
+                                    </div>
+                                    <div class="pt-8 font-bold">
+                                        Montée en maturité digitale
+                                    </div>
+                                </mat-card>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <p>Un accompagnement transparent, indépendant, et réaliste</p>
             </g2sp-services-section>
         </div>
     </div>
