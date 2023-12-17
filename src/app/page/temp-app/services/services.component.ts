@@ -6,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { PageHeaderComponent } from '../../../component/page-header/page-header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { SimpleSectionComponent } from '../../../component/services-section/simple-section/simple-section.component';
 
 export interface Section {
     iconName?: string;
@@ -23,6 +24,7 @@ export interface Section {
         PageHeaderComponent,
         MatButtonModule,
         MatCardModule,
+        SimpleSectionComponent,
     ],
     templateUrl: './services.component.html',
 })
@@ -56,5 +58,16 @@ export class ServicesComponent implements OnInit {
                     'Un niveau de préparation incertain et hétérogène aux défaillances de vos systèmes critiques',
             },
         ];
+    }
+
+    getQueryStatDesc() {
+        return 'Un état des lieux précis des forces et faiblesses de votre résilience cyber : un rapport opérationnel détaillé, une synthèse pour la Direction.';
+    }
+
+    getAdsClickDescr() {
+        return 'Des recommandations ciblées, réalistes, échelonnées, adaptées au niveau de digitalisation de vos processus.';
+    }
+    getGroupDescr() {
+        return 'Un accompagnement au juste nécessaire cohérent avec le dimensionnement de vos ressources et les caractéristiques de vos activités.';
     }
 }

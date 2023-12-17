@@ -13,7 +13,7 @@
                     <ng-container *ngFor="let section of whySections">
                         <div class="flex flex-col">
                             <div class="text-center">
-                                <mat-icon class="text-blue-700 scale-[300%]">{{
+                                <mat-icon class="text-blue-600 scale-[300%]">{{
                                     section.iconName
                                 }}</mat-icon>
                             </div>
@@ -31,63 +31,46 @@
                 [sectionTitle]="'SIMPLE'"
                 [alignTitle]="'middle'"
             >
-                <div class="flex flex-col justify-center text-center mt-12">
-                    <span class="flex justify-center items-center">
-                        <mat-icon class="text-blue-700 scale-[300%] mr-8">
-                            query_stats
-                        </mat-icon>
-                        <div>
-                            Un état des lieux précis des forces et faiblesses de
-                            votre résilience cyber : un rapport opérationnel
-                            détaillé, une synthèse pour la Direction.
-                        </div>
-                    </span>
-
-                    <span class="flex justify-center items-center mt-16">
-                        <mat-icon class="text-blue-700 scale-[300%] mr-8">
-                            ads_click
-                        </mat-icon>
-                        <div>
-                            Des recommandations ciblées, réalistes, échelonnées,
-                            adaptées au niveau de digitalisation de vos
-                            processus.
-                        </div>
-                    </span>
-
-                    <span class="flex justify-center items-center mt-16">
-                        <mat-icon class="text-blue-700 scale-[300%] mr-8">
-                            group_3
-                        </mat-icon>
-                        <div>
-                            Un accompagnement au juste nécessaire cohérent avec
-                            le dimensionnement de vos ressources et les
-                            caractéristiques de vos activités.
-                        </div>
-                    </span>
+                <div
+                    class="flex flex-col justify-center text-center mt-12 pl-16"
+                >
+                    <g2sp-simple-section
+                        [description]="getQueryStatDesc()"
+                        iconName="query_stats"
+                    />
+                    <g2sp-simple-section
+                        class="mt-16"
+                        [description]="getAdsClickDescr()"
+                        iconName="ads_click"
+                    />
+                    <g2sp-simple-section
+                        class="mt-16"
+                        [description]="getGroupDescr()"
+                        iconName="group_3"
+                    />
                 </div>
             </g2sp-services-section>
         </div>
 
-        <div class="mt-12">
+        <div class="mt-12 h-96">
             <g2sp-services-section
                 [sectionTitle]="'COMPÉTENT'"
                 [alignTitle]="'middle'"
             >
-                <div
-                    class="mt-12 px-64 pt-64 w-full"
-                    style="
-                        background-image: url('../../../../assets/expertise.jpg');
-                    "
-                >
-                    <div class="w-full flex flex-col">
+                <div class="mt-12 px-64 w-full">
+                    <div class="w-full flex flex-col text-gray-600">
                         <!-- carré global-->
-                        <div class="flex">
+                        <p class="text-center text-xl font-bold">
+                            Un accompagnement transparent, indépendant, et
+                            réaliste
+                        </p>
+                        <div class="flex mt-12">
                             <!-- ligne une-->
                             <div class="inline-block">
                                 <mat-card class="p-10">
                                     <div class="text-center">
                                         <mat-icon
-                                            class="text-blue-700 scale-[250%]"
+                                            class="text-green-700 scale-[250%]"
                                             >verified_user</mat-icon
                                         >
                                     </div>
@@ -100,7 +83,7 @@
                                 <mat-card class="p-10">
                                     <div class="text-center">
                                         <mat-icon
-                                            class="text-blue-700 scale-[250%]"
+                                            class="text-purple-800 scale-[250%]"
                                             >assessment</mat-icon
                                         >
                                         -
@@ -118,7 +101,7 @@
                                 <mat-card class="p-10">
                                     <div class="text-center">
                                         <mat-icon
-                                            class="text-blue-700 scale-[250%]"
+                                            class="text-blue-600 scale-[250%]"
                                             >engineering</mat-icon
                                         >
                                         -
@@ -134,7 +117,7 @@
                                 <mat-card class="p-10">
                                     <div class="text-center">
                                         <mat-icon
-                                            class="text-blue-700 scale-[250%]"
+                                            class="text-yellow-500 scale-[250%]"
                                             >trending_up</mat-icon
                                         >
                                         -
@@ -147,8 +130,6 @@
                         </div>
                     </div>
                 </div>
-
-                <p>Un accompagnement transparent, indépendant, et réaliste</p>
             </g2sp-services-section>
         </div>
     </div>
