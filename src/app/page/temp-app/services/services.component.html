@@ -1,5 +1,5 @@
-<div class="flex flex-col justify-center items-center">
-    <div class="mt-8 w-full">
+<div class="flex flex-col justify-center">
+    <div class="mt-8 w-full self-center">
         <g2sp-page-header iconPath="assets/secu5croped.jpg"></g2sp-page-header>
     </div>
 
@@ -9,7 +9,7 @@
                 [sectionTitle]="'POURQUOI ?'"
                 [alignTitle]="'middle'"
             >
-                <div class="flex mt-24">
+                <div class="flex justify-center mt-20">
                     <ng-container *ngFor="let section of whySections">
                         <div class="flex flex-col">
                             <div class="text-center">
@@ -29,29 +29,41 @@
         <div class="mt-12">
             <g2sp-services-section
                 [sectionTitle]="'SIMPLE'"
-                [alignTitle]="'left'"
+                [alignTitle]="'middle'"
             >
-                <div class="flex">
-                    <div class="text-left w-full">
-                        <p>
+                <div class="flex flex-col justify-center text-center mt-12">
+                    <span class="flex justify-center items-center">
+                        <mat-icon class="text-blue-700 scale-[300%] mr-8">
+                            query_stats
+                        </mat-icon>
+                        <div>
                             Un état des lieux précis des forces et faiblesses de
-                            votre résilience cyber.
-                        </p>
-                        <p>
-                            Un rapport opérationnel détaillé, une synthèse pour
-                            la Direction.
-                        </p>
-                        <p>
+                            votre résilience cyber : un rapport opérationnel
+                            détaillé, une synthèse pour la Direction.
+                        </div>
+                    </span>
+
+                    <span class="flex justify-center items-center mt-16">
+                        <mat-icon class="text-blue-700 scale-[300%] mr-8">
+                            ads_click
+                        </mat-icon>
+                        <div>
                             Des recommandations ciblées, réalistes, échelonnées,
                             adaptées au niveau de digitalisation de vos
-                            processus,
-                        </p>
-                        <p>
+                            processus.
+                        </div>
+                    </span>
+
+                    <span class="flex justify-center items-center mt-16">
+                        <mat-icon class="text-blue-700 scale-[300%] mr-8">
+                            group_3
+                        </mat-icon>
+                        <div>
                             Un accompagnement au juste nécessaire cohérent avec
                             le dimensionnement de vos ressources et les
-                            caractéristiques de vos activités,
-                        </p>
-                    </div>
+                            caractéristiques de vos activités.
+                        </div>
+                    </span>
                 </div>
             </g2sp-services-section>
         </div>
@@ -61,22 +73,29 @@
                 [sectionTitle]="'COMPÉTENT'"
                 [alignTitle]="'left'"
             >
-                <div class="flex">
-                    <div class="text-left w-full">
-                        <p>Une expertise complète :</p>
-                        <ul>
-                            <li>Analyse des cyber-risques</li>
-                            <li>Audit interne organisation et processus</li>
-                            <li>Montée en maturité digitale</li>
-                            <li>
-                                Pilotage du déploiement des plans de
-                                sécurisation
-                            </li>
-                        </ul>
-                        <p>
-                            Un accompagnement transparent, indépendant, et
-                            réaliste
-                        </p>
+                <div class="relative">
+                    <img
+                        [src]="'assets/expertise.jpg'"
+                        alt="sécurité"
+                        class="w-full shadow-xl shadow-gray-200"
+                    />
+                    <div class="flex absolute bottom-0 text-white">
+                        <div class="text-left w-full">
+                            <p>Une expertise complète :</p>
+                            <ul>
+                                <li>Analyse des cyber-risques</li>
+                                <li>Audit interne organisation et processus</li>
+                                <li>Montée en maturité digitale</li>
+                                <li>
+                                    Pilotage du déploiement des plans de
+                                    sécurisation
+                                </li>
+                            </ul>
+                            <p>
+                                Un accompagnement transparent, indépendant, et
+                                réaliste
+                            </p>
+                        </div>
                     </div>
                 </div>
             </g2sp-services-section>

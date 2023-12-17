@@ -32,12 +32,12 @@ export class ServicesComponent implements OnInit {
     private initWhySections() {
         this.whySections = [
             {
-                iconName: 'language',
+                iconName: 'hub',
                 description:
                     'Des collaborateurs de plus en plus nombreux à utiliser massivement des outils informatiques',
             },
             {
-                iconName: 'psychology',
+                iconName: 'compost',
                 description:
                     'Une culture souvent fragile de la sécurité informatique de nombreux collaborateurs',
             },
