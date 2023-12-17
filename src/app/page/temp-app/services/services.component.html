@@ -5,47 +5,45 @@
 
     <div class="px-24 w-full text-lg">
         <div class="mt-12">
-            <g2sp-services-section
-                [sectionTitle]="'POURQUOI ?'"
-                [alignTitle]="'middle'"
-            >
+            <g2sp-services-section [sectionTitle]="'#Why' | g2spTranslate">
                 <div class="flex justify-center mt-20">
-                    <ng-container *ngFor="let section of whySections">
-                        <div class="flex flex-col">
-                            <div class="text-center">
-                                <mat-icon class="text-blue-600 scale-[300%]">{{
-                                    section.iconName
-                                }}</mat-icon>
-                            </div>
-                            <div class="w-72 text-center mt-10 px-8">
-                                {{ section.description }}
-                            </div>
-                        </div>
-                    </ng-container>
+                    <g2sp-why-section
+                        [description]="'#ServiceWhyCollabs' | g2spTranslate"
+                        iconName="hub"
+                    />
+                    <g2sp-why-section
+                        [description]="'#ServiceWhyCulture' | g2spTranslate"
+                        iconName="compost"
+                    />
+                    <g2sp-why-section
+                        [description]="'#ServiceWhyThreat' | g2spTranslate"
+                        iconName="bug_report"
+                    />
+                    <g2sp-why-section
+                        [description]="'#ServiceWhyPrepa' | g2spTranslate"
+                        iconName="lock_open"
+                    />
                 </div>
             </g2sp-services-section>
         </div>
 
         <div class="mt-12">
-            <g2sp-services-section
-                [sectionTitle]="'SIMPLE'"
-                [alignTitle]="'middle'"
-            >
+            <g2sp-services-section [sectionTitle]="'#Simple' | g2spTranslate">
                 <div
                     class="flex flex-col justify-center text-center mt-12 pl-16"
                 >
                     <g2sp-simple-section
-                        [description]="getQueryStatDesc()"
+                        [description]="'#ServiceSimpleState' | g2spTranslate"
                         iconName="query_stats"
                     />
                     <g2sp-simple-section
                         class="mt-16"
-                        [description]="getAdsClickDescr()"
+                        [description]="'#ServiceSimpleTarget' | g2spTranslate"
                         iconName="ads_click"
                     />
                     <g2sp-simple-section
                         class="mt-16"
-                        [description]="getGroupDescr()"
+                        [description]="'#ServiceSimpleSized' | g2spTranslate"
                         iconName="group_3"
                     />
                 </div>
@@ -54,79 +52,45 @@
 
         <div class="mt-12 h-96">
             <g2sp-services-section
-                [sectionTitle]="'COMPÉTENT'"
-                [alignTitle]="'middle'"
+                [sectionTitle]="'#Competent' | g2spTranslate"
             >
                 <div class="mt-12 px-64 w-full">
                     <div class="w-full flex flex-col text-gray-600">
                         <!-- carré global-->
                         <p class="text-center text-xl font-bold">
-                            Un accompagnement transparent, indépendant, et
-                            réaliste
+                            {{
+                                '#ServiceCompetentAccompagnement'
+                                    | g2spTranslate
+                            }}
                         </p>
                         <div class="flex mt-12">
-                            <!-- ligne une-->
-                            <div class="inline-block">
-                                <mat-card class="p-10">
-                                    <div class="text-center">
-                                        <mat-icon
-                                            class="text-green-700 scale-[250%]"
-                                            >verified_user</mat-icon
-                                        >
-                                    </div>
-                                    <div class="pt-8 font-bold">
-                                        Analyse des cyber-risques
-                                    </div>
-                                </mat-card>
-                            </div>
-                            <div class="inline-block flex-1">
-                                <mat-card class="p-10">
-                                    <div class="text-center">
-                                        <mat-icon
-                                            class="text-purple-800 scale-[250%]"
-                                            >assessment</mat-icon
-                                        >
-                                        -
-                                    </div>
-                                    <div class="pt-8 font-bold">
-                                        Audit interne organisation et processus
-                                    </div>
-                                </mat-card>
-                            </div>
+                            <g2sp-competent-section
+                                class="flex-auto"
+                                iconColor="text-green-700"
+                                iconName="verified_user"
+                                [description]="'#CyberThreat' | g2spTranslate"
+                            />
+                            <g2sp-competent-section
+                                class="flex-auto"
+                                iconColor="text-purple-800"
+                                iconName="assessment"
+                                [description]="'#InternalAudit' | g2spTranslate"
+                            />
                         </div>
 
                         <div class="flex mt-1">
-                            <!-- ligne deux-->
-                            <div class="inline-block flex-1">
-                                <mat-card class="p-10">
-                                    <div class="text-center">
-                                        <mat-icon
-                                            class="text-blue-600 scale-[250%]"
-                                            >engineering</mat-icon
-                                        >
-                                        -
-                                    </div>
-                                    <div class="pt-8 font-bold">
-                                        Pilotage du déploiement des plans de
-                                        sécurisation
-                                    </div>
-                                </mat-card>
-                            </div>
-
-                            <div class="inline-block">
-                                <mat-card class="p-10">
-                                    <div class="text-center">
-                                        <mat-icon
-                                            class="text-yellow-500 scale-[250%]"
-                                            >trending_up</mat-icon
-                                        >
-                                        -
-                                    </div>
-                                    <div class="pt-8 font-bold">
-                                        Montée en maturité digitale
-                                    </div>
-                                </mat-card>
-                            </div>
+                            <g2sp-competent-section
+                                class="flex-auto"
+                                iconColor="text-blue-600"
+                                iconName="engineering"
+                                [description]="'#Deployment' | g2spTranslate"
+                            />
+                            <g2sp-competent-section
+                                class="flex-auto"
+                                iconColor="text-yellow-500"
+                                iconName="trending_up"
+                                [description]="'#Maturity' | g2spTranslate"
+                            />
                         </div>
                     </div>
                 </div>
