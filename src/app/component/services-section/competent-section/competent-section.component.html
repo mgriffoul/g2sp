@@ -4,36 +4,50 @@
             <p class="text-center text-2xl font-bold">
                 {{ '#ServiceCompetentAccompagnement' | g2spTranslate }}
             </p>
-            <div class="flex mt-12" id="competent">
+            <div class="flex mt-12">
                 <g2sp-competent-section-item
+                    id="competent-1"
                     class="flex-auto"
                     iconColor="text-green-700"
                     iconName="verified_user"
+                    [@slideInLeftTop]="
+                        shouldDisplay('competent-1') ? 'visible' : 'void'
+                    "
                     [description]="'#CyberThreat' | g2spTranslate"
                 />
+
                 <g2sp-competent-section-item
+                    id="competent-2"
                     class="flex-auto"
                     iconColor="text-purple-800"
                     iconName="assessment"
+                    [@slideInRightTop]="
+                        shouldDisplay('competent-2') ? 'visible' : 'void'
+                    "
                     [description]="'#InternalAudit' | g2spTranslate"
                 />
             </div>
-
             <div class="flex mt-1">
                 <g2sp-competent-section-item
+                    id="competent-3"
                     class="flex-auto"
                     iconColor="text-blue-600"
                     iconName="engineering"
+                    [@slideInLeftBot]="
+                        shouldDisplay('competent-3') ? 'visible' : 'void'
+                    "
                     [description]="'#Deployment' | g2spTranslate"
                 />
-                <div>
-                    <g2sp-competent-section-item
-                        class="flex-auto"
-                        iconColor="text-yellow-500"
-                        iconName="trending_up"
-                        [description]="'#Maturity' | g2spTranslate"
-                    />
-                </div>
+                <g2sp-competent-section-item
+                    id="competent-4"
+                    class="flex-auto"
+                    iconColor="text-yellow-500"
+                    iconName="trending_up"
+                    [@slideInRightBot]="
+                        shouldDisplay('competent-4') ? 'visible' : 'void'
+                    "
+                    [description]="'#Maturity' | g2spTranslate"
+                />
             </div>
         </div>
     </div>

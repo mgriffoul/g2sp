@@ -4,11 +4,12 @@ import { ServicesSectionComponent } from '../services-section.component';
 import { SimpleSectionItemComponent } from './simple-section-item/simple-section-item.component';
 import { G2spAnimationService } from '../../../utils/animations/g2sp-animation.service';
 import {
-    G2spFadeIn,
-    G2spSlideIn,
-    G2spSlideInSlow,
-    G2spSlideInVerySlow,
-} from '../../../utils/animations/g2sp-animations';
+    animate,
+    state,
+    style,
+    transition,
+    trigger,
+} from '@angular/animations';
 
 @Component({
     selector: 'g2sp-simple-section',
@@ -18,7 +19,23 @@ import {
         ServicesSectionComponent,
         SimpleSectionItemComponent,
     ],
-    animations: [G2spSlideInSlow, G2spSlideIn, G2spSlideInVerySlow],
+    animations: [
+        trigger('slideIn200', [
+            state('void', style({ opacity: 0, transform: 'translateX(80px)' })),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`200ms ease-in-out`)),
+        ]),
+        trigger('slideIn400', [
+            state('void', style({ opacity: 0, transform: 'translateX(80px)' })),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`400ms ease-in-out`)),
+        ]),
+        trigger('slideIn800', [
+            state('void', style({ opacity: 0, transform: 'translateX(80px)' })),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`800ms ease-in-out`)),
+        ]),
+    ],
     standalone: true,
 })
 export class SimpleSectionComponent {

@@ -3,6 +3,13 @@ import { CompetentSectionItemComponent } from './competent-section-item/competen
 import { G2spTranslatePipe } from '../../../pipe/g2sp-translate.pipe';
 import { ServicesSectionComponent } from '../services-section.component';
 import { G2spAnimationService } from '../../../utils/animations/g2sp-animation.service';
+import {
+    animate,
+    state,
+    style,
+    transition,
+    trigger,
+} from '@angular/animations';
 
 @Component({
     selector: 'g2sp-competent-section',
@@ -12,11 +19,44 @@ import { G2spAnimationService } from '../../../utils/animations/g2sp-animation.s
         G2spTranslatePipe,
         ServicesSectionComponent,
     ],
+    animations: [
+        trigger('slideInLeftBot', [
+            state(
+                'void',
+                style({ opacity: 0, transform: 'translateX(-180px)' }),
+            ),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`450ms ease-in`)),
+        ]),
+        trigger('slideInRightBot', [
+            state(
+                'void',
+                style({ opacity: 0, transform: 'translateX(180px)' }),
+            ),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`400ms 200ms ease-in`)),
+        ]),
+        trigger('slideInRightTop', [
+            state(
+                'void',
+                style({ opacity: 0, transform: 'translateX(180px)' }),
+            ),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`350ms 500ms ease-in`)),
+        ]),
+        trigger('slideInLeftTop', [
+            state(
+                'void',
+                style({ opacity: 0, transform: 'translateX(-180px)' }),
+            ),
+            state('*', style({ opacity: 1, transform: 'translateX(0)' })),
+            transition('void => *', animate(`200ms 900ms ease-in`)),
+        ]),
+    ],
     standalone: true,
 })
 export class CompetentSectionComponent {
-    isSectionVisible = false;
-    private sectionHasBeenShown = false;
+    visibleSections: string[] = [];
 
     constructor(
         private animationService: G2spAnimationService,
@@ -25,12 +65,30 @@ export class CompetentSectionComponent {
 
     @HostListener('window:scroll', [])
     onWindowScroll() {
-        this.isSectionVisible = this.sectionHasBeenShown
-            ? true
-            : this.animationService.checkVisibility(this.elementRef, 'why');
+        const elementIdToCheck = [
+            'competent-1',
+            'competent-2',
+            'competent-3',
+            'competent-4',
+        ];
+        elementIdToCheck.forEach((elementId) => {
+            if (this.visibleSections.includes(elementId)) {
+                return;
+            }
+            const visible = this.animationService.checkVisibility(
+                this.elementRef,
+                elementId,
+            );
+            if (visible) {
+                this.visibleSections.push(elementId);
+            }
+        });
+    }
 
-        if (!this.sectionHasBeenShown && this.isSectionVisible) {
-            this.sectionHasBeenShown = true;
-        }
+    shouldDisplay(id: string) {
+        return (
+            this.visibleSections.includes(id) &&
+            this.visibleSections.includes('competent-4')
+        );
     }
 }
