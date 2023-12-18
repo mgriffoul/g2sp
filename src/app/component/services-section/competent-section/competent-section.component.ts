@@ -1,17 +1,16 @@
-import { Component, Input } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
+import { Component } from '@angular/core';
+import { CompetentSectionItemComponent } from './competent-section-item/competent-section-item.component';
 import { G2spTranslatePipe } from '../../../pipe/g2sp-translate.pipe';
-import { NgClass } from '@angular/common';
+import { ServicesSectionComponent } from '../services-section.component';
 
 @Component({
     selector: 'g2sp-competent-section',
     templateUrl: './competent-section.component.html',
-    imports: [MatCardModule, MatIconModule, G2spTranslatePipe, NgClass],
+    imports: [
+        CompetentSectionItemComponent,
+        G2spTranslatePipe,
+        ServicesSectionComponent,
+    ],
     standalone: true,
 })
-export class CompetentSectionComponent {
-    @Input() iconName: string = '';
-    @Input() description: string = '';
-    @Input() iconColor: string = '';
-}
+export class CompetentSectionComponent {}

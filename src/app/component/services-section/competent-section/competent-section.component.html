@@ -1,12 +1,41 @@
-<div class="inline-block w-full">
-    <mat-card class="p-10">
-        <div class="text-center">
-            <mat-icon [ngClass]="iconColor" class="scale-[250%]">{{
-                iconName
-            }}</mat-icon>
+<g2sp-services-section [sectionTitle]="'#Competent' | g2spTranslate">
+    <!--    [@fadeIn]="isCompetentVisible ? 'visible' : 'void'"-->
+    <div class="h-96 mt-12 px-64 w-full mb-32">
+        <div class="w-full flex flex-col text-gray-600">
+            <p class="text-center text-2xl font-bold">
+                {{ '#ServiceCompetentAccompagnement' | g2spTranslate }}
+            </p>
+            <div class="flex mt-12" id="competent">
+                <g2sp-competent-section-item
+                    class="flex-auto"
+                    iconColor="text-green-700"
+                    iconName="verified_user"
+                    [description]="'#CyberThreat' | g2spTranslate"
+                />
+                <g2sp-competent-section-item
+                    class="flex-auto"
+                    iconColor="text-purple-800"
+                    iconName="assessment"
+                    [description]="'#InternalAudit' | g2spTranslate"
+                />
+            </div>
+
+            <div class="flex mt-1">
+                <g2sp-competent-section-item
+                    class="flex-auto"
+                    iconColor="text-blue-600"
+                    iconName="engineering"
+                    [description]="'#Deployment' | g2spTranslate"
+                />
+                <div>
+                    <g2sp-competent-section-item
+                        class="flex-auto"
+                        iconColor="text-yellow-500"
+                        iconName="trending_up"
+                        [description]="'#Maturity' | g2spTranslate"
+                    />
+                </div>
+            </div>
         </div>
-        <div class="pt-8 font-bold text-center">
-            {{ description }}
-        </div>
-    </mat-card>
-</div>
+    </div>
+</g2sp-services-section>

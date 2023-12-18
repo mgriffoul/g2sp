@@ -1,8 +1,20 @@
-<div class="flex flex-col">
-    <div class="text-center">
-        <mat-icon class="text-blue-600 scale-[300%]">{{ iconName }}</mat-icon>
+<g2sp-services-section id="why" [sectionTitle]="'#Why' | g2spTranslate">
+    <div class="flex justify-center mt-20">
+        <g2sp-why-section-item
+            [description]="'#ServiceWhyCollabs' | g2spTranslate"
+            iconName="hub"
+        />
+        <g2sp-why-section-item
+            [description]="'#ServiceWhyCulture' | g2spTranslate"
+            iconName="compost"
+        />
+        <g2sp-why-section-item
+            [description]="'#ServiceWhyThreat' | g2spTranslate"
+            iconName="bug_report"
+        />
+        <g2sp-why-section-item
+            [description]="'#ServiceWhyPrepa' | g2spTranslate"
+            iconName="lock_open"
+        />
     </div>
-    <div class="w-72 text-center mt-10 px-8">
-        {{ description }}
-    </div>
-</div>
+</g2sp-services-section>

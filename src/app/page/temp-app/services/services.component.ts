@@ -6,10 +6,10 @@ import { MatListModule } from '@angular/material/list';
 import { PageHeaderComponent } from '../../../component/page-header/page-header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { SimpleSectionComponent } from '../../../component/services-section/simple-section/simple-section.component';
+import { SimpleSectionItemComponent } from '../../../component/services-section/simple-section/simple-section-item/simple-section-item.component';
 import { G2spTranslatePipe } from '../../../pipe/g2sp-translate.pipe';
-import { WhySectionComponent } from '../../../component/services-section/why-section/why-section.component';
-import { CompetentSectionComponent } from '../../../component/services-section/competent-section/competent-section.component';
+import { WhySectionItemComponent } from '../../../component/services-section/why-section/why-section-item/why-section-item.component';
+import { CompetentSectionItemComponent } from '../../../component/services-section/competent-section/competent-section-item/competent-section-item.component';
 import {
     animate,
     state,
@@ -17,6 +17,9 @@ import {
     transition,
     trigger,
 } from '@angular/animations';
+import { WhySectionComponent } from '../../../component/services-section/why-section/why-section.component';
+import { SimpleSectionComponent } from '../../../component/services-section/simple-section/simple-section.component';
+import { CompetentSectionComponent } from '../../../component/services-section/competent-section/competent-section.component';
 
 @Component({
     selector: 'g2sp-services',
@@ -29,9 +32,12 @@ import {
         PageHeaderComponent,
         MatButtonModule,
         MatCardModule,
-        SimpleSectionComponent,
+        SimpleSectionItemComponent,
         G2spTranslatePipe,
+        WhySectionItemComponent,
+        CompetentSectionItemComponent,
         WhySectionComponent,
+        SimpleSectionComponent,
         CompetentSectionComponent,
     ],
     templateUrl: './services.component.html',

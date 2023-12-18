@@ -1,14 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { G2spTranslatePipe } from '../../../pipe/g2sp-translate.pipe';
-import { MatIconModule } from '@angular/material/icon';
+import { ServicesSectionComponent } from '../services-section.component';
+import { WhySectionItemComponent } from './why-section-item/why-section-item.component';
 
 @Component({
     selector: 'g2sp-why-section',
-    templateUrl: './why-section.component.html',
-    imports: [G2spTranslatePipe, MatIconModule],
+    templateUrl: 'why-section.component.html',
+    imports: [
+        G2spTranslatePipe,
+        ServicesSectionComponent,
+        WhySectionItemComponent,
+    ],
     standalone: true,
 })
-export class WhySectionComponent {
-    @Input() iconName: string = '';
-    @Input() description: string = '';
-}
+export class WhySectionComponent {}

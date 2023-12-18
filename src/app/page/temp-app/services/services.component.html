@@ -4,109 +4,16 @@
     </div>
 
     <div class="px-24 w-full text-lg">
-        <div class="mt-12">
-            <g2sp-services-section
-                id="why"
-                [sectionTitle]="'#Why' | g2spTranslate"
-            >
-                <div
-                    class="flex justify-center mt-20"
-                    [@fadeIn]="isWhyVisible ? 'visible' : 'void'"
-                >
-                    <g2sp-why-section
-                        [description]="'#ServiceWhyCollabs' | g2spTranslate"
-                        iconName="hub"
-                    />
-                    <g2sp-why-section
-                        [description]="'#ServiceWhyCulture' | g2spTranslate"
-                        iconName="compost"
-                    />
-                    <g2sp-why-section
-                        [description]="'#ServiceWhyThreat' | g2spTranslate"
-                        iconName="bug_report"
-                    />
-                    <g2sp-why-section
-                        [description]="'#ServiceWhyPrepa' | g2spTranslate"
-                        iconName="lock_open"
-                    />
-                </div>
-            </g2sp-services-section>
+        <div class="mt-24">
+            <g2sp-why-section />
         </div>
 
-        <div class="mt-12">
-            <g2sp-services-section [sectionTitle]="'#Simple' | g2spTranslate">
-                <div
-                    id="simple"
-                    class="flex flex-col justify-center text-center mt-12 pl-16"
-                    [@fadeIn]="isSimpleVisible ? 'visible' : 'void'"
-                >
-                    <g2sp-simple-section
-                        [description]="'#ServiceSimpleState' | g2spTranslate"
-                        iconName="query_stats"
-                    />
-                    <g2sp-simple-section
-                        class="mt-16"
-                        [description]="'#ServiceSimpleTarget' | g2spTranslate"
-                        iconName="ads_click"
-                    />
-                    <g2sp-simple-section
-                        class="mt-16"
-                        [description]="'#ServiceSimpleSized' | g2spTranslate"
-                        iconName="group_3"
-                    />
-                </div>
-            </g2sp-services-section>
+        <div class="mt-24">
+            <g2sp-simple-section />
         </div>
 
-        <div class="mt-12">
-            <g2sp-services-section
-                [sectionTitle]="'#Competent' | g2spTranslate"
-            >
-                <div
-                    class="h-96 mt-12 px-64 w-full mb-32"
-                    [@fadeIn]="isCompetentVisible ? 'visible' : 'void'"
-                >
-                    <div class="w-full flex flex-col text-gray-600">
-                        <p class="text-center text-xl font-bold">
-                            {{
-                                '#ServiceCompetentAccompagnement'
-                                    | g2spTranslate
-                            }}
-                        </p>
-                        <div class="flex mt-12" id="competent">
-                            <g2sp-competent-section
-                                class="flex-auto"
-                                iconColor="text-green-700"
-                                iconName="verified_user"
-                                [description]="'#CyberThreat' | g2spTranslate"
-                            />
-                            <g2sp-competent-section
-                                class="flex-auto"
-                                iconColor="text-purple-800"
-                                iconName="assessment"
-                                [description]="'#InternalAudit' | g2spTranslate"
-                            />
-                        </div>
-
-                        <div class="flex mt-1">
-                            <g2sp-competent-section
-                                class="flex-auto"
-                                iconColor="text-blue-600"
-                                iconName="engineering"
-                                [description]="'#Deployment' | g2spTranslate"
-                            />
-                            <div>
-                                <g2sp-competent-section
-                                    class="flex-auto"
-                                    iconColor="text-yellow-500"
-                                    iconName="trending_up"
-                                    [description]="'#Maturity' | g2spTranslate"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </g2sp-services-section>
+        <div class="mt-24">
+            <g2sp-competent-section />
         </div>
     </div>
 </div>
