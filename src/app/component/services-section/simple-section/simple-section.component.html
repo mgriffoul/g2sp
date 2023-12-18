@@ -1,5 +1,4 @@
 <g2sp-services-section [sectionTitle]="'#Simple' | g2spTranslate">
-    <!--            [@fadeIn]="isSimpleVisible ? 'visible' : 'void'"-->
     <div
         id="simple"
         class="flex flex-col justify-center text-center mt-12 pl-16"
@@ -7,16 +6,19 @@
         <g2sp-simple-section-item
             [description]="'#ServiceSimpleState' | g2spTranslate"
             iconName="query_stats"
+            [@slideIn]="isSectionVisible ? 'visible' : 'void'"
         />
         <g2sp-simple-section-item
             class="mt-16"
             [description]="'#ServiceSimpleTarget' | g2spTranslate"
             iconName="ads_click"
+            [@slideInSlow]="isSectionVisible ? 'visible' : 'void'"
         />
         <g2sp-simple-section-item
             class="mt-16"
             [description]="'#ServiceSimpleSized' | g2spTranslate"
             iconName="group_3"
+            [@slideInVerySlow]="isSectionVisible ? 'visible' : 'void'"
         />
     </div>
 </g2sp-services-section>

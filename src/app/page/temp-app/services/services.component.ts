@@ -25,17 +25,7 @@ import { CompetentSectionComponent } from '../../../component/services-section/c
     selector: 'g2sp-services',
     standalone: true,
     imports: [
-        CommonModule,
-        MatIconModule,
-        ServicesSectionComponent,
-        MatListModule,
         PageHeaderComponent,
-        MatButtonModule,
-        MatCardModule,
-        SimpleSectionItemComponent,
-        G2spTranslatePipe,
-        WhySectionItemComponent,
-        CompetentSectionItemComponent,
         WhySectionComponent,
         SimpleSectionComponent,
         CompetentSectionComponent,
@@ -49,59 +39,4 @@ import { CompetentSectionComponent } from '../../../component/services-section/c
         ]),
     ],
 })
-export class ServicesComponent {
-    isWhyVisible = false;
-    private whyHasBeenShown = false;
-
-    isSimpleVisible = false;
-    private isSimpleHasBeenShown = false;
-
-    isCompetentVisible = false;
-    private isCompetentHasBeenShown = false;
-
-    constructor(private elementRef: ElementRef) {}
-
-    @HostListener('window:scroll', [])
-    onWindowScroll() {
-        this.isWhyVisible = this.whyHasBeenShown
-            ? true
-            : this.checkVisibility('why');
-        this.isSimpleVisible = this.isSimpleHasBeenShown
-            ? true
-            : this.checkVisibility('simple');
-        this.isCompetentVisible = this.isCompetentHasBeenShown
-            ? true
-            : this.checkVisibility('competent');
-    }
-
-    private checkVisibility(id: string): boolean {
-        const element = this.elementRef.nativeElement.querySelector(`#${id}`);
-        if (element) {
-            const bounding = element.getBoundingClientRect();
-            const isVisible =
-                bounding.top >= 0 &&
-                bounding.bottom <=
-                    (window.innerHeight ||
-                        document.documentElement.clientHeight);
-
-            if (isVisible) {
-                this.changeElementDisplayState(id);
-            }
-
-            return isVisible;
-        }
-        return false;
-    }
-
-    changeElementDisplayState(id: string) {
-        if (id === 'why') {
-            this.whyHasBeenShown = true;
-        }
-        if (id === 'simple') {
-            this.isSimpleHasBeenShown = true;
-        }
-        if (id === 'competent') {
-            this.isCompetentHasBeenShown = true;
-        }
-    }
-}
+export class ServicesComponent {}
