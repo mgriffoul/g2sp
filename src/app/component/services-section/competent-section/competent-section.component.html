@@ -1,54 +1,61 @@
-<g2sp-services-section [sectionTitle]="'#Competent' | g2spTranslate">
-    <div class="h-96 mt-12 px-64 w-full mb-32">
-        <div class="w-full flex flex-col text-gray-600">
-            <p class="text-center text-2xl font-bold">
-                {{ '#ServiceCompetentAccompagnement' | g2spTranslate }}
-            </p>
-            <div class="flex mt-12">
-                <g2sp-competent-section-item
-                    id="competent-1"
-                    class="flex-auto"
-                    iconColor="text-green-700"
-                    iconName="verified_user"
-                    [@slideInLeftTop]="
-                        shouldDisplay('competent-1') ? 'visible' : 'void'
-                    "
-                    [description]="'#CyberThreat' | g2spTranslate"
-                />
-
-                <g2sp-competent-section-item
-                    id="competent-2"
-                    class="flex-auto"
-                    iconColor="text-purple-800"
-                    iconName="assessment"
-                    [@slideInRightTop]="
-                        shouldDisplay('competent-2') ? 'visible' : 'void'
-                    "
-                    [description]="'#InternalAudit' | g2spTranslate"
-                />
-            </div>
-            <div class="flex mt-1">
-                <g2sp-competent-section-item
-                    id="competent-3"
-                    class="flex-auto"
-                    iconColor="text-blue-600"
-                    iconName="engineering"
-                    [@slideInLeftBot]="
-                        shouldDisplay('competent-3') ? 'visible' : 'void'
-                    "
-                    [description]="'#Deployment' | g2spTranslate"
-                />
-                <g2sp-competent-section-item
-                    id="competent-4"
-                    class="flex-auto"
-                    iconColor="text-yellow-500"
-                    iconName="trending_up"
-                    [@slideInRightBot]="
-                        shouldDisplay('competent-4') ? 'visible' : 'void'
-                    "
-                    [description]="'#Maturity' | g2spTranslate"
-                />
+<div class="pt-8 pb-16">
+    <g2sp-services-section [sectionTitle]="'#Competent' | g2spTranslate">
+        <div class="h-96 w-full">
+            <div class="w-full flex flex-col justify-center text-gray-600">
+                <p class="text-center font-bold">
+                    {{ '#ServiceCompetentAccompagnement' | g2spTranslate }}
+                </p>
+                <div class="">
+                    <div
+                        [@slideInLeftTop]="
+                            isSectionVisible ? 'visible' : 'void'
+                        "
+                    >
+                        <g2sp-competent-section-item
+                            iconColor="text-green-700"
+                            iconName="verified_user"
+                            [description]="'#CyberThreat' | g2spTranslate"
+                        />
+                    </div>
+                    <div
+                        [@slideInRightTop]="
+                            isSectionVisible ? 'visible' : 'void'
+                        "
+                    >
+                        <g2sp-competent-section-item
+                            id=""
+                            iconColor="text-purple-800"
+                            iconName="assessment"
+                            [description]="'#InternalAudit' | g2spTranslate"
+                        />
+                    </div>
+                </div>
+                <div id="competent"></div>
+                <div class="">
+                    <div
+                        [@slideInLeftBot]="
+                            isSectionVisible ? 'visible' : 'void'
+                        "
+                    >
+                        <g2sp-competent-section-item
+                            iconColor="text-blue-600"
+                            iconName="engineering"
+                            [description]="'#Deployment' | g2spTranslate"
+                        />
+                    </div>
+                    <div
+                        [@slideInRightBot]="
+                            isSectionVisible ? 'visible' : 'void'
+                        "
+                    >
+                        <g2sp-competent-section-item
+                            iconColor="text-yellow-500"
+                            iconName="trending_up"
+                            [description]="'#Maturity' | g2spTranslate"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</g2sp-services-section>
+    </g2sp-services-section>
+</div>

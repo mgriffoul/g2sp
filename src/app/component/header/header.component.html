@@ -1,13 +1,16 @@
-<mat-toolbar
-    class="flex items-center justify-between px-4 py-2 h-16 shadow-gray-50 shadow-lg"
->
+<mat-toolbar class="px-4 py-2 shadow-gray-50 shadow-sm">
     <div>
-        <img [src]="'assets/logo-g2sp.svg'" class="h-12 mr-8" alt="logo" />
+        <img
+            (click)="handleClickLogo()"
+            [src]="'assets/logo.svg'"
+            class="h-10 w-full"
+            alt="logo"
+        />
     </div>
-    <nav class="flex-1 flex items-center justify-normal h-full">
+    <nav class="flex-1 flex items-center justify-normal h-12">
         <g2sp-header-item
             [categoryName]="PageId.SERVICES"
-            class="h-16"
+            class="h-14"
             [ngClass]="{
                 'border-b-2 border-blue-500 transition duration-200':
                     isSelected('SERVICES')
@@ -17,7 +20,7 @@
         />
         <g2sp-header-item
             [categoryName]="PageId.TEAM"
-            class="h-16"
+            class="h-14"
             [ngClass]="{
                 'border-b-2 border-blue-500 transition duration-200':
                     isSelected('TEAM')
@@ -26,7 +29,7 @@
         />
         <g2sp-header-item
             [categoryName]="PageId.CONTACT"
-            class="h-16"
+            class="h-14"
             [ngClass]="{
                 'border-b-2 border-blue-500 transition duration-200':
                     isSelected('CONTACT')

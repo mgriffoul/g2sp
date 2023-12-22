@@ -63,4 +63,8 @@ export class HeaderComponent implements OnInit {
     private async routeTo(url: string) {
         await this.router.navigateByUrl(url);
     }
+
+    handleClickLogo() {
+        this.router.navigateByUrl('/beta-version/services');
+    }
 }

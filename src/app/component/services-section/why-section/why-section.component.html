@@ -1,24 +1,26 @@
-<g2sp-services-section id="why" [sectionTitle]="'#Why' | g2spTranslate">
-    <div class="flex justify-center mt-20">
-        <g2sp-why-section-item
-            [@fadeIn]="isSectionVisible ? 'visible' : 'void'"
-            [description]="'#ServiceWhyCollabs' | g2spTranslate"
-            iconName="hub"
-        />
-        <g2sp-why-section-item
-            [@fadeIn2]="isSectionVisible ? 'visible' : 'void'"
-            [description]="'#ServiceWhyCulture' | g2spTranslate"
-            iconName="compost"
-        />
-        <g2sp-why-section-item
-            [@fadeIn3]="isSectionVisible ? 'visible' : 'void'"
-            [description]="'#ServiceWhyThreat' | g2spTranslate"
-            iconName="bug_report"
-        />
-        <g2sp-why-section-item
-            [@fadeIn4]="isSectionVisible ? 'visible' : 'void'"
-            [description]="'#ServiceWhyPrepa' | g2spTranslate"
-            iconName="lock_open"
-        />
-    </div>
-</g2sp-services-section>
+<div class="pt-8">
+    <g2sp-services-section [sectionTitle]="'#Why' | g2spTranslate">
+        <div id="why" class="flex flex-col justify-center space-y-8 mt-8">
+            <g2sp-why-section-item
+                [@fadeIn]="isSectionVisible ? 'visible' : 'void'"
+                [description]="'#ServiceWhyCollabs' | g2spTranslate"
+                iconName="hub"
+            />
+            <g2sp-why-section-item
+                [@fadeIn2]="isSectionVisible ? 'visible' : 'void'"
+                [description]="'#ServiceWhyCulture' | g2spTranslate"
+                iconName="compost"
+            />
+            <g2sp-why-section-item
+                [@fadeIn3]="isSectionVisible ? 'visible' : 'void'"
+                [description]="'#ServiceWhyThreat' | g2spTranslate"
+                iconName="bug_report"
+            />
+            <g2sp-why-section-item
+                [@fadeIn4]="isSectionVisible ? 'visible' : 'void'"
+                [description]="'#ServiceWhyPrepa' | g2spTranslate"
+                iconName="lock_open"
+            />
+        </div>
+    </g2sp-services-section>
+</div>

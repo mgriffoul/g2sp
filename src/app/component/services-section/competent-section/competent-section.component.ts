@@ -26,23 +26,23 @@ import {
                 style({ opacity: 0, transform: 'translateX(-180px)' }),
             ),
             state('*', style({ opacity: 1, transform: 'translateX(0)' })),
-            transition('void => *', animate(`450ms ease-in`)),
+            transition('void => *', animate(`450ms 600ms ease-in`)),
         ]),
         trigger('slideInRightBot', [
             state(
                 'void',
-                style({ opacity: 0, transform: 'translateX(180px)' }),
+                style({ opacity: 0, transform: 'translateX(-180px)' }),
             ),
             state('*', style({ opacity: 1, transform: 'translateX(0)' })),
-            transition('void => *', animate(`400ms 200ms ease-in`)),
+            transition('void => *', animate(`400ms 900ms ease-in`)),
         ]),
         trigger('slideInRightTop', [
             state(
                 'void',
-                style({ opacity: 0, transform: 'translateX(180px)' }),
+                style({ opacity: 0, transform: 'translateX(-180px)' }),
             ),
             state('*', style({ opacity: 1, transform: 'translateX(0)' })),
-            transition('void => *', animate(`350ms 500ms ease-in`)),
+            transition('void => *', animate(`350ms 300ms ease-in`)),
         ]),
         trigger('slideInLeftTop', [
             state(
@@ -50,13 +50,14 @@ import {
                 style({ opacity: 0, transform: 'translateX(-180px)' }),
             ),
             state('*', style({ opacity: 1, transform: 'translateX(0)' })),
-            transition('void => *', animate(`200ms 900ms ease-in`)),
+            transition('void => *', animate(`200ms ease-in`)),
         ]),
     ],
     standalone: true,
 })
 export class CompetentSectionComponent {
-    visibleSections: string[] = [];
+    isSectionVisible = false;
+    private sectionHasBeenShown = false;
 
     constructor(
         private animationService: G2spAnimationService,
@@ -64,31 +65,19 @@ export class CompetentSectionComponent {
     ) {}
 
     @HostListener('window:scroll', [])
+    @HostListener('window:touchstart', ['$event'])
+    @HostListener('window:touchmove', ['$event'])
+    @HostListener('window:touchend', ['$event'])
     onWindowScroll() {
-        const elementIdToCheck = [
-            'competent-1',
-            'competent-2',
-            'competent-3',
-            'competent-4',
-        ];
-        elementIdToCheck.forEach((elementId) => {
-            if (this.visibleSections.includes(elementId)) {
-                return;
-            }
-            const visible = this.animationService.checkVisibility(
-                this.elementRef,
-                elementId,
-            );
-            if (visible) {
-                this.visibleSections.push(elementId);
-            }
-        });
-    }
+        this.isSectionVisible = this.sectionHasBeenShown
+            ? true
+            : this.animationService.checkVisibility(
+                  this.elementRef,
+                  'competent',
+              );
 
-    shouldDisplay(id: string) {
-        return (
-            this.visibleSections.includes(id) &&
-            this.visibleSections.includes('competent-4')
-        );
+        if (!this.sectionHasBeenShown && this.isSectionVisible) {
+            this.sectionHasBeenShown = true;
+        }
     }
 }

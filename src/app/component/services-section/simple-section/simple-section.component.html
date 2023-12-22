@@ -1,24 +1,23 @@
-<g2sp-services-section [sectionTitle]="'#Simple' | g2spTranslate">
-    <div
-        id="simple"
-        class="flex flex-col justify-center text-center mt-12 pl-16"
-    >
-        <g2sp-simple-section-item
-            [description]="'#ServiceSimpleState' | g2spTranslate"
-            iconName="query_stats"
-            [@slideIn200]="isSectionVisible ? 'visible' : 'void'"
-        />
-        <g2sp-simple-section-item
-            class="mt-16"
-            [description]="'#ServiceSimpleTarget' | g2spTranslate"
-            iconName="ads_click"
-            [@slideIn400]="isSectionVisible ? 'visible' : 'void'"
-        />
-        <g2sp-simple-section-item
-            class="mt-16"
-            [description]="'#ServiceSimpleSized' | g2spTranslate"
-            iconName="group_3"
-            [@slideIn800]="isSectionVisible ? 'visible' : 'void'"
-        />
-    </div>
-</g2sp-services-section>
+<div class="pt-8">
+    <g2sp-services-section [sectionTitle]="'#Simple' | g2spTranslate">
+        <div id="simple" class="flex flex-col justify-center space-y-8 mt-8">
+            <g2sp-simple-section-item
+                [description]="'#ServiceSimpleState' | g2spTranslate"
+                iconName="query_stats"
+                [@slideIn200]="isSectionVisible ? 'visible' : 'void'"
+            />
+            <g2sp-simple-section-item
+                class="mt-16"
+                [description]="'#ServiceSimpleTarget' | g2spTranslate"
+                iconName="ads_click"
+                [@slideIn400]="isSectionVisible ? 'visible' : 'void'"
+            />
+            <g2sp-simple-section-item
+                class="mt-16"
+                [description]="'#ServiceSimpleSized' | g2spTranslate"
+                iconName="group_3"
+                [@slideIn800]="isSectionVisible ? 'visible' : 'void'"
+            />
+        </div>
+    </g2sp-services-section>
+</div>

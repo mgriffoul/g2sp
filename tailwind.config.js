@@ -3,6 +3,13 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      screens: {
+        'xs': '20rem',       // mobile portrait
+        'sm': '30rem',       // mobile landscape
+        'md': '45rem',       // tablette portrait
+        'lg': '60rem',       // tablette landscape
+        'xl': '75rem',       // desktop
+      },
       colors: {
         blue: {
           50: '#f0f9ff',

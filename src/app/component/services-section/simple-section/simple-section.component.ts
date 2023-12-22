@@ -48,6 +48,9 @@ export class SimpleSectionComponent {
     ) {}
 
     @HostListener('window:scroll', [])
+    @HostListener('window:touchstart', ['$event'])
+    @HostListener('window:touchmove', ['$event'])
+    @HostListener('window:touchend', ['$event'])
     onWindowScroll() {
         this.isSectionVisible = this.sectionHasBeenShown
             ? true

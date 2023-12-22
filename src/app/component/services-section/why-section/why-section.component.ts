@@ -53,7 +53,11 @@ export class WhySectionComponent {
     ) {}
 
     @HostListener('window:scroll', [])
-    onWindowScroll() {
+    @HostListener('window:touchstart', ['$event'])
+    @HostListener('window:touchmove', ['$event'])
+    @HostListener('window:touchend', ['$event'])
+    onWindowScroll(event: TouchEvent) {
+        console.log('on scroll');
         this.isSectionVisible = this.sectionHasBeenShown
             ? true
             : this.animationService.checkVisibility(this.elementRef, 'why');
