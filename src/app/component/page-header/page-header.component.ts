@@ -12,9 +12,16 @@ export class PageHeaderComponent {
     @Input() iconPath: string = '';
 
     handleExpandMoreClick() {
-        const section = document.getElementById('why');
+        const section = document.getElementById('g2sp-header');
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const targetOffset =
+                section.getBoundingClientRect().top + window.scrollY;
+            const scrollToPosition = targetOffset + 700; // Décale de 200px vers le haut
+
+            window.scroll({
+                top: scrollToPosition,
+                behavior: 'smooth',
+            });
         }
     }
 }
