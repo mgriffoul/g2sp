@@ -1,8 +1,10 @@
-<div class="flex ml-4">
+<div class="flex ml-4 sm:ml-0 sm:flex-col">
     <div class="text-center">
-        <mat-icon class="text-blue-600 scale-[200%]">{{ iconName }}</mat-icon>
+        <mat-icon class="text-blue-600 scale-[200%] sm:scale-[300%]">{{
+            iconName
+        }}</mat-icon>
     </div>
-    <div class="ml-4 text-center text-sm">
+    <div class="ml-4 text-center text-sm sm:text-xl sm:w-72 sm:mt-10 sm:px-8">
         {{ description }}
     </div>
 </div>

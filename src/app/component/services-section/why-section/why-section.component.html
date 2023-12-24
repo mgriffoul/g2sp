@@ -1,6 +1,9 @@
 <div class="pt-8">
     <g2sp-services-section [sectionTitle]="'#Why' | g2spTranslate">
-        <div id="why" class="flex flex-col justify-center space-y-8 mt-8">
+        <div
+            id="why"
+            class="flex flex-col justify-center space-y-8 sm:space-y-0 mt-8 sm:flex-row sm:mt-20"
+        >
             <g2sp-why-section-item
                 [@fadeIn]="isSectionVisible ? 'visible' : 'void'"
                 [description]="'#ServiceWhyCollabs' | g2spTranslate"
