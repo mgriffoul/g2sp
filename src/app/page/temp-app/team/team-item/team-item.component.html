@@ -6,12 +6,12 @@
     />
     <div class="pt-4 self-center">
         <span class="text-blue-700 text-lg">{{
-            teamMemberLoco | g2spTranslate
+            teamMemberTranslateId | g2spTranslate
         }}</span>
     </div>
 
     <ul [@fadeIn]="animationState" style="opacity: 0">
-        <ng-container *ngFor="let topChapter of bioChapter">
+        <ng-container *ngFor="let topChapter of bioChaptersTranslateId">
             <li class="text-gray-600 text-justify pt-2">
                 {{ topChapter | g2spTranslate }}
             </li>

@@ -26,8 +26,8 @@ import {
     standalone: true,
 })
 export class TeamItemComponent implements OnInit {
-    @Input() teamMemberLoco = '';
-    @Input() bioChapter: string[] = [];
+    @Input() teamMemberTranslateId = '';
+    @Input() bioChaptersTranslateId: string[] = [];
     @Input() imgPath: string = '';
 
     animationState = 'visible';
