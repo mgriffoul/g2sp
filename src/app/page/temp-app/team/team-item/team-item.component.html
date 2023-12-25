@@ -11,9 +11,9 @@
     </div>
 
     <ul [@fadeIn]="animationState" style="opacity: 0">
-        <ng-container *ngFor="let topChapter of bioChaptersTranslateId">
+        <ng-container *ngFor="let chapter of bioChaptersTranslateId">
             <li class="text-gray-600 text-justify pt-2">
-                {{ topChapter | g2spTranslate }}
+                {{ chapter | g2spTranslate }}
             </li>
         </ng-container>
     </ul>
