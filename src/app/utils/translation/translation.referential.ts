@@ -61,4 +61,25 @@ export const TRANSLATION_REFERENTIAL: Record<string, string> = {
         'A partir de 2010 il oriente sa carrière dans le domaine de la cybersécurité et devient le Chief Information Security Officer du groupe Renault.',
     '#PierreBio5':
         'Il est aujourd’hui expert leader en charge de la stratégie de la cybersécurité du véhicule connecté pour le groupe Renault.',
+
+    '#Elise': 'Élise Dufour',
+    '#EliseBio': 'Associée du Cabinet Bignon Lebray',
+    '#EliseBio2':
+        'Spécialiste en droit des nouvelles technologies, Elise Dufour accompagne une clientèle française et internationale dans leurs projets numériques.',
+    '#EliseBio3':
+        'Ses principaux domaines de compétences, tant en conseil qu’en contentieux, sont le suivi des projets informatique (Cloud computing, Intelligence artificielle, Saas, Open source), la valorisation et la sécurisation des données collectées (personnelles et non personnelles), la stratégie en transformation digitale, la défense de l’actif immatériel d’une entreprise sur internet (e-réputation, politique AdWords, stratégie en matière de noms de domaine et de nouvelles extensions, récupération de noms de domaine). Et plus généralement, l’accompagnement de tout projet e-commerce envisagé (sur site internet mais aussi sur application mobile).',
+    '#EliseBio4':
+        'Elise Dufour est Présidente de l’association Cyberlex depuis 2016. Elle est également Experte Parl .fr par l’OMPI. Elle est par ailleurs certifiée Data Protection Officer.',
+    '#EliseBio5':
+        'En 2022, Elise est référencé par les classements d’avocats majeurs en IP et IT : Legal 500, Palmarès du Droit, WTR 1000.',
+    '#Gilles': 'Gilles Rouvier',
+    '#GillesBio': 'Associé Fondateur du Cabinet Lawways',
+    '#GillesBio2':
+        'Gilles a développé depuis plus de 20 ans une expertise spécifique et pointue, en conseil et en contentieux, dans le secteur des nouvelles technologies et leur développement, et plus particulièrement en matière de protection des données personnelles et en droit des contrats informatiques.',
+    '#GillesBio3':
+        'Avant de créer Lawways début 2006, il a collaboré auprès de cabinets d’avocats internationaux – August & Debouzy, Gide Loyrette Nouel – mais également au sein des directions juridiques de groupes industriels et financiers mondiaux.',
+    '#GillesBio4':
+        'Son parcours pendant plusieurs années au cœur du business, notamment chez General Electric (GE) dans les activités Medical Systems puis Finance, lui a permis d’acquérir une compréhension concrète des besoins des entreprises et une vision économique des problématiques juridiques, lui permettant d’apporter une véritable valeur ajoutée aux solutions qu’il propose.',
+    '#GillesBio5':
+        'Il est Vice-Président de Cyberlex « l’association du Droit et des Nouvelles technologies » et Vice-Président, Local Representative d’ITechLaw, “International Technology Law Association ».',
 };
