@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { NgClass, NgForOf } from '@angular/common';
+import { NgClass, NgForOf, NgIf } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { G2spTranslatePipe } from '../../pipe/g2sp-translate.pipe';
 
@@ -13,9 +13,11 @@ import { G2spTranslatePipe } from '../../pipe/g2sp-translate.pipe';
         MatDividerModule,
         NgClass,
         G2spTranslatePipe,
+        NgIf,
     ],
     standalone: true,
 })
 export class ServicesSectionComponent {
     @Input() sectionTitle: string = '';
+    @Input() noDivider = false;
 }

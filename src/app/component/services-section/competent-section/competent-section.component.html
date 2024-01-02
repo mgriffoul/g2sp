@@ -1,11 +1,16 @@
-<div class="pt-8 pb-16">
-    <g2sp-services-section [sectionTitle]="'#Competent' | g2spTranslate">
+<div class="pt-8">
+    <g2sp-services-section
+        [sectionTitle]="'#Competent' | g2spTranslate"
+        [noDivider]="true"
+    >
         <div class="h-96 w-full">
-            <div class="w-full flex flex-col justify-center text-gray-600">
-                <p class="text-center font-bold">
+            <div
+                class="w-full flex flex-col justify-center text-gray-600 pb-32"
+            >
+                <p class="text-center font-bold sm:pt-8">
                     {{ '#ServiceCompetentAccompagnement' | g2spTranslate }}
                 </p>
-                <div class="">
+                <div class="sm:flex sm:mx-auto sm:pt-16">
                     <div
                         [@slideInLeftTop]="
                             isSectionVisible ? 'visible' : 'void'
@@ -30,8 +35,7 @@
                         />
                     </div>
                 </div>
-                <div id="competent"></div>
-                <div class="">
+                <div id="competent" class="sm:flex sm:mx-auto sm:pt-1">
                     <div
                         [@slideInLeftBot]="
                             isSectionVisible ? 'visible' : 'void'
@@ -44,6 +48,7 @@
                         />
                     </div>
                     <div
+                        class="sm:pb-16"
                         [@slideInRightBot]="
                             isSectionVisible ? 'visible' : 'void'
                         "
