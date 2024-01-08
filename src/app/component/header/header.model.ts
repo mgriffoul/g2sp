@@ -12,14 +12,14 @@ export interface G2spPage {
 export const PAGE_REFERENTIAL: G2spPage[] = [
     {
         id: PageId.SERVICES,
-        url: '/beta-version/services',
+        url: '/services',
     },
     {
         id: PageId.TEAM,
-        url: '/beta-version/team',
+        url: '/team',
     },
     {
         id: PageId.CONTACT,
-        url: '/beta-version/contact',
+        url: '/contact',
     },
 ];

@@ -65,6 +65,6 @@ export class HeaderComponent implements OnInit {
     }
 
     handleClickLogo() {
-        this.router.navigateByUrl('/beta-version/services');
+        this.router.navigateByUrl('/services');
     }
 }
