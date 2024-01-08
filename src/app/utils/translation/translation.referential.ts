@@ -81,5 +81,5 @@ export const TRANSLATION_REFERENTIAL: Record<string, string> = {
     '#GillesBio4':
         'Son parcours pendant plusieurs années au cœur du business, notamment chez General Electric (GE) dans les activités Medical Systems puis Finance, lui a permis d’acquérir une compréhension concrète des besoins des entreprises et une vision économique des problématiques juridiques, lui permettant d’apporter une véritable valeur ajoutée aux solutions qu’il propose.',
     '#GillesBio5':
-        'Il est Vice-Président de Cyberlex « l’association du Droit et des Nouvelles technologies » et Vice-Président, Local Representative d’ITechLaw, “International Technology Law Association ».',
+        'Il est Président de Cyberlex « l’association du Droit et des Nouvelles technologies » et Président de la commission « Tech M&A »  au sein d’ITechLaw, “International Technology Law Association ».',
 };

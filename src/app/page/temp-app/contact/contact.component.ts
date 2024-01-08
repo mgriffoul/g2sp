@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
     selector: 'g2sp-contact',
     standalone: true,
     imports: [CommonModule],
+    styleUrls: ['./contact.component.scss'],
     templateUrl: './contact.component.html',
 })
 export class ContactComponent {}
