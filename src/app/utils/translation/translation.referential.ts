@@ -10,12 +10,12 @@ export const TRANSLATION_REFERENTIAL: Record<string, string> = {
     '#ServiceWhyPrepa':
         'Un niveau de préparation incertain et hétérogène aux défaillances de vos systèmes critiques',
     '#ServiceSimpleState':
-        'Un état des lieux précis des forces et faiblesses de votre résilience cyber : un rapport opérationnel détaillé, une synthèse pour la Direction.',
+        'Un état des lieux précis des forces et faiblesses de votre résilience cyber, y compris sur l’état de votre couverture juridique et ses possibles conséquences financières en cas d’attaque cyber.',
     '#ServiceSimpleTarget':
-        'Des recommandations ciblées, réalistes, échelonnées, adaptées au niveau de digitalisation de vos processus.',
+        'Un rapport opérationnel détaillé, des recommandations ciblées, réalistes, échelonnées, adaptées au niveau de digitalisation de vos processus.',
     '#ServiceSimpleSized':
         'Un accompagnement au juste nécessaire cohérent avec le dimensionnement de vos ressources et les caractéristiques de vos activités.',
-    '#InternalAudit': 'Audit interne organisation et processus',
+    '#InternalAudit': 'Audit interne organisation, processus et juridique',
     '#CyberThreat': 'Analyse des cyber-risques',
     '#Deployment': 'Pilotage du déploiement des plans de sécurisation',
     '#Maturity': 'Montée en maturité digitale',
@@ -35,7 +35,7 @@ export const TRANSLATION_REFERENTIAL: Record<string, string> = {
         'A rejoint le groupe RENAULT après sa thèse à l’INRIA et la création de 2 start-up.',
     '#Bruno': 'Bruno Simon',
     '#BrunoBio':
-        'originellement Architecte DPLG, il a consacré sa carrière à l’impact de la transformation digitale sur les organisations et les produits.',
+        'Originellement Architecte DPLG, il a consacré sa carrière à l’impact de la transformation digitale sur les organisations et les produits.',
     '#BrunoBio2':
         'Il a dirigé la conversion au numérique du Design Industriel Renault, puis la Direction de Projet transversale gamme en charge du multimédia et du véhicule connecté.',
     '#BrunoBio3':
@@ -44,7 +44,7 @@ export const TRANSLATION_REFERENTIAL: Record<string, string> = {
     '#BrunoBio4':
         'Bruno a également été membre des conseils d’administration de Mediamobile et SIGNANT, et du conseil de Surveillance d’Ertico – ITS Europe',
     '#Youssef': 'Youssef Guiga',
-    '#YoussefBio': 'a fait toute sa carrière au sein du Groupe Renault.',
+    '#YoussefBio': 'A fait toute sa carrière au sein du Groupe Renault.',
     '#YoussefBio2':
         'Il a occupé des fonctions opérationnelles aux Achats, à l’Ingénierie, à la Qualité, entre autres.',
     '#YoussefBio3':
